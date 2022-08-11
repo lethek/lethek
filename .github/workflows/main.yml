@@ -1,0 +1,40 @@
+name: Metrics
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Profile Metrics
+        uses: lowlighter/metrics@v3.26
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+      - name: Organization introduction
+        uses: lowlighter/metrics@v3.26
+        with:
+          filename: metrics.plugin.introduction.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: lethek
+          base: header
+          plugin_introduction: yes
+      - name: Languages
+        uses: lowlighter/metrics@v3.26
+        with:
+          filename: metrics.plugin.languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          commits_authoring: firstname lastname, username, username@users.noreply.github.com
+      - name: Compact display
+        uses: lowlighter/metrics@v3.26
+        with:
+          filename: metrics.plugin.achievements.compact.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
