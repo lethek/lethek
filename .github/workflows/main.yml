@@ -15,6 +15,9 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           base_indepth: yes
+          plugin_languages: yes
+          plugin_languages_indepth: yes
+          commits_authoring: firstname lastname, username, username@users.noreply.github.com
       - name: Organization introduction
         uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
