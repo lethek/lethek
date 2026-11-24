@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Profile Metrics
-        uses: lowlighter/metrics@v3.26
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
       - name: Organization introduction
-        uses: lowlighter/metrics@v3.26
+        uses: lowlighter/metrics@v3.34
         with:
           filename: metrics.plugin.introduction.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -23,7 +23,7 @@ jobs:
           base: header
           plugin_introduction: yes
       - name: Languages
-        uses: lowlighter/metrics@v3.26
+        uses: lowlighter/metrics@v3.34
         with:
           filename: metrics.plugin.languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
           plugin_languages_indepth: yes
           commits_authoring: firstname lastname, username, username@users.noreply.github.com
       - name: Compact display
-        uses: lowlighter/metrics@v3.26
+        uses: lowlighter/metrics@v3.34
         with:
           filename: metrics.plugin.achievements.compact.svg
           token: ${{ secrets.METRICS_TOKEN }}
