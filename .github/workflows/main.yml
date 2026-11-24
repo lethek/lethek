@@ -18,30 +18,6 @@ jobs:
           plugin_languages: yes
           plugin_languages_indepth: yes
           commits_authoring: firstname lastname, username, username@users.noreply.github.com
-      - name: Organization introduction
-        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
-        with:
-          filename: metrics.plugin.introduction.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: lethek
-          base: header
-          plugin_introduction: yes
-      - name: Languages
-        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
-        with:
-          filename: metrics.plugin.languages.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          plugin_languages: yes
-          plugin_languages_indepth: yes
-          commits_authoring: firstname lastname, username, username@users.noreply.github.com
-      - name: Compact display
-        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
-        with:
-          filename: metrics.plugin.achievements.compact.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_achievements: yes
-          plugin_achievements_display: compact
       - name: Isometric commit calendar
         uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
