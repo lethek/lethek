@@ -14,6 +14,7 @@ jobs:
         uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          base_indepth: yes
       - name: Organization introduction
         uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
@@ -38,3 +39,11 @@ jobs:
           base: ""
           plugin_achievements: yes
           plugin_achievements_display: compact
+      - name: Isometric commit calendar
+        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
+        with:
+          filename: metrics.plugin.isocalendar.fullyear.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
