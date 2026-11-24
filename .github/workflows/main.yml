@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Profile Metrics
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
           token: ${{ secrets.METRICS_TOKEN }}
       - name: Organization introduction
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
           filename: metrics.plugin.introduction.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -23,7 +23,7 @@ jobs:
           base: header
           plugin_introduction: yes
       - name: Languages
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
           filename: metrics.plugin.languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
           plugin_languages_indepth: yes
           commits_authoring: firstname lastname, username, username@users.noreply.github.com
       - name: Compact display
-        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        uses: gh-metrics/metrics@0252603d89e89b96f0413c3cb6b0649b64387ba9 # master 2026-10-16
         with:
           filename: metrics.plugin.achievements.compact.svg
           token: ${{ secrets.METRICS_TOKEN }}
